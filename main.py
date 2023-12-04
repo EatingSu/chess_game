@@ -1,7 +1,7 @@
 import numpy as np
 import pygame as pg
 from board_class import *
-from mcts_class import *
+from mcts_class_5 import *
 
 if __name__ == '__main__':
 
@@ -49,7 +49,7 @@ if __name__ == '__main__':
                         color = 1 if player_is_black else -1
                         robot_color = -1 if player_is_black else 1
                         last_move = [row, col]
-                        node = Node(checkerboard, last_move, color) #Node 增加了一个传入参数-》上一步的位置
+                        node = Node(checkerboard, last_move, color) #Node 增加了一个传入参数->上一步的位置
                         mcts = MCTS()
                         move = mcts.get_next_move(node) #check一下这个move的坐标是大棋盘还是小棋盘
 
